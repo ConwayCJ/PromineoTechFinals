@@ -1,0 +1,14 @@
+.selfPortrait {
+  border-radius: 50%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content:space-evenly;
+}
+
+.headerSection {
+  height: 250px;
+  width: 500px
+}

@@ -1,0 +1,12 @@
+.section {
+  background-color: rgba(75, 147, 210, 0.718);
+  padding: 50px 25px;
+  margin: 0 auto;
+  margin-top: 1em;
+}
+
+.quiltedImages {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+}
