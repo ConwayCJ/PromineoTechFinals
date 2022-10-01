@@ -1,5 +1,4 @@
 import React from 'react'
-
 import styles from '../../styles/ReviewStyles/ReviewMemo.module.css'
 
 export default function ReviewMemo() {

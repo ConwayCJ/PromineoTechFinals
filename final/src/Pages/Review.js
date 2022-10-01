@@ -4,9 +4,6 @@ import ReviewForm from "../components/ReviewComponents/ReviewForm";
 import ReviewList from "../components/ReviewComponents/ReviewList"
 
 function Review () {
-
-  
-
   return(
     <>
     <ReviewMemo/>

@@ -1,19 +1,22 @@
 import React, { useState } from 'react'
-import { FormControl, InputLabel, Input, FormHelperText, Box, TextField, Button} from '@mui/material'
+import { FormControl, InputLabel, Input, TextField, Button} from '@mui/material'
 import styles from '../../styles/ReviewStyles/ReviewForm.module.css'
 
 export default function ReviewForm() {
   const [userName, setUserName] = useState('') 
   const [textReview, setTextReview] = useState('')
 
+  //changes userName in state on input change
   const handleNameChange = (e) => {
     setUserName(e.target.value)
   }
 
+  //changes textReview in state on input change
   const handleTextReviewChange = (e) => {
     setTextReview(e.target.value)
   }
 
+  //function to POST to mockAPI
   const handleSubmit = (e) => {
     e.preventDefault()
 
@@ -27,11 +30,12 @@ export default function ReviewForm() {
         'Content-Type': 'application/json'
       }
     })
+
     setUserName('')
     setTextReview('')
   }
 
-
+  
   return (
     <form
       className={styles.reviewContainer}
@@ -40,16 +44,14 @@ export default function ReviewForm() {
       <FormControl
       className={styles.reviewNameContainer}
       >
-        <InputLabel htmlFor="name">Name</InputLabel>
+        <InputLabel>Name</InputLabel>
         <Input
-         id="name" 
          value={userName}
          onChange={handleNameChange} />
       </FormControl><br></br>
       <TextField
           value={textReview}
           className={styles.reviewTextArea}
-          id="standard-textarea"
           label="Leave a Review"
           multiline
           rows={4}

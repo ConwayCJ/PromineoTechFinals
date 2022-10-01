@@ -1,32 +1,44 @@
 import React, { useEffect, useState } from 'react'
 import styles from '../../styles/ReviewStyles/ReviewList.module.css'
-import DeleteIcon from '@mui/icons-material/Delete'
-import UpdateIcon from '@mui/icons-material/Edit'
+import Button from '@mui/material/Button'
+import ClearIcon from '@mui/icons-material/Clear'
+import UpdateForm from './UpdateForm'
 
 export default function ReviewList() {
   const [userReviews, setUserReviews] = useState([])
-  const apiURL = 'https://631d27aa789612cd07a6df2b.mockapi.io/api/finalFormData/'
 
 
+  function getReviews() {
+    fetch('https://631d27aa789612cd07a6df2b.mockapi.io/api/finalFormData/')
+    .then(response => response.json())
+    .then(console.log(userReviews))
+    .then(data => setUserReviews(data))
+    .then(console.log(userReviews))
+  }
 
   useEffect(() => {
-    fetch(apiURL)
-      .then((response) => response.json())
-      .then((json) => setUserReviews(json))
-  }, [])
+    getReviews()
+  }, [] )
 
-  const handleDelete = (id) => {
-    fetch(apiURL + id, {
+
+
+  //delete function
+  const deleteReview = (review) => {
+    const url = `https://631d27aa789612cd07a6df2b.mockapi.io/api/finalFormData/${review.id}`
+    fetch(url, {
       method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }).then((response) => {
+      if (response.status === 200) {
+        setUserReviews(userReviews.filter((person) => person.id !== review.id))
+      }
     })
-    .then(res => res.text())
-    .then(res => console.log(res))
   }
 
-  const handleUpdate = (id) => {
-    
-  }
-
+  //update function
+  
   return (
     <main className={styles.reviewListContainer}>
       <header>
@@ -34,16 +46,12 @@ export default function ReviewList() {
       </header>
       {userReviews.map((review, index) => {
         return (
-          <div className={styles.reviewListUserReview} key={review.id}>
+          <div className={styles.reviewListUserReview} key={review.id + index}>
             <h2>
-              <div className={styles.editIcons}>
+              <div className={styles.reviewTitle}>
                 {review.name}
-                <UpdateIcon 
-                  onClick={handleUpdate(review.id)}
-                sx={{ ml: 3 }} />
-                <DeleteIcon 
-                  onClick={handleDelete(review.id)}
-                />
+                <UpdateForm userReview={review} getReviews={getReviews}/>
+                <Button size="small" onClick={() => deleteReview(review)} ><ClearIcon/></Button>
               </div>
             </h2>
             <section className={styles.reviewListTextField}>
