@@ -11,7 +11,7 @@ function Project () {
     <main className={styles.main}>
       
       <img className={styles.pokemonBanner} alt="Pokemon Banner" src={pokemonBanner}/>
-      <h2>Create your own pokemon team</h2>
+      <h2>Create your own pokemon trainer ID</h2>
 
       <FormAndPokemonContainer/>
 

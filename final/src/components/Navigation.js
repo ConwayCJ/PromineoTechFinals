@@ -36,7 +36,7 @@ export default function Navigation() {
       onChange={handleChange} 
       aria-label="nav tabs example">
        <LinkTab label="Home" to="/" />
-       <LinkTab label="About" to="/about" />
+       <LinkTab label="Review" to="/review" />
        <LinkTab label="Project" to="/project" />
      </Tabs>
     </Box>

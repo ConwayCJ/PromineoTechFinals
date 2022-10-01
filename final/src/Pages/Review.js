@@ -1,4 +1,7 @@
 import React from "react";
+import ReviewMemo from "../components/ReviewComponents/ReviewMemo"
+import ReviewForm from "../components/ReviewComponents/ReviewForm";
+import ReviewList from "../components/ReviewComponents/ReviewList"
 
 function Review () {
 
@@ -6,7 +9,9 @@ function Review () {
 
   return(
     <>
-    This is the review page.
+    <ReviewMemo/>
+    <ReviewForm/>
+    <ReviewList/>
     </>
   )
 }
