@@ -1,8 +1,8 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './Pages/Home';
-import About from './Pages/About';
-import Profile from './Pages/Profile';
+import Review from './Pages/Review';
+import Project from './Pages/Project';
 import ErrorPage from './Pages/ErrorPage'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
@@ -14,8 +14,8 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home/>}/>
-          <Route path="/about" element={<About/>}/>
-          <Route path="/profile" element={<Profile/>}/>
+          <Route path="/review" element={<Review/>}/>
+          <Route path="/project" element={<Project/>}/>
           <Route path="*" element={<ErrorPage/>}/>
         </Routes>
       </main>

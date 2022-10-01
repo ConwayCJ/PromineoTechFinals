@@ -1,0 +1,11 @@
+.userFormMainContent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.userForm {
+  text-align: left;
+  font-weight: 600;  
+}

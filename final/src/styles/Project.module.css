@@ -1,0 +1,12 @@
+.main {
+  background-color: yellow;
+  border: 3px double black;
+  border-radius: 1%;
+  margin: 0.2em;
+  padding: 8px;
+  text-align: center;
+}
+
+.pokemonBanner {
+  height: 70px;
+}

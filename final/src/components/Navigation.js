@@ -1,6 +1,5 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import '../styles/Navigation.module.css'
 import Box from '@mui/material/Box';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -38,7 +37,7 @@ export default function Navigation() {
       aria-label="nav tabs example">
        <LinkTab label="Home" to="/" />
        <LinkTab label="About" to="/about" />
-       <LinkTab label="Profile" to="/profile" />
+       <LinkTab label="Project" to="/project" />
      </Tabs>
     </Box>
     
