@@ -16,10 +16,10 @@ export default function PortfolioBody() {
   return (
   <>
     <section className={styles.section}>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum eum dolores facilis, reprehenderit iure inventore tenetur, assumenda doloribus nulla eius eligendi doloremque accusantium perspiciatis? Iusto, fuga ex! Labore, omnis quam.
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic officia provident quisquam labore saepe asperiores, soluta deleniti expedita numquam accusamus? Optio officiis laboriosam vel cupiditate quaerat perferendis totam tempore reiciendis.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis ea maiores aut dolores eveniet, ab voluptatibus non veniam corporis expedita assumenda iusto praesentium! Ad repellat harum nesciunt animi amet optio.
-  </section>   
+      <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum eum dolores facilis, reprehenderit iure inventore tenetur, assumenda doloribus nulla eius eligendi doloremque accusantium perspiciatis? Iusto, fuga ex! Labore, omnis quam.
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic officia provident quisquam labore saepe asperiores, soluta deleniti expedita numquam accusamus? Optio officiis laboriosam vel cupiditate quaerat perferendis totam tempore reiciendis.      </p>
+    </section>   
 
   <section className={styles.quiltedImages}>
     <ImageList

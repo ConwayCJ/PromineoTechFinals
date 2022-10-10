@@ -47,13 +47,16 @@ export default function ReviewList() {
       {userReviews.map((review, index) => {
         return (
           <div className={styles.reviewListUserReview} key={review.id + index}>
-            <h2>
               <div className={styles.reviewTitle}>
+                <h4 className={styles.reviewTitleUser}>
                 {review.name}
-                <UpdateForm userReview={review} getReviews={getReviews}/>
-                <Button size="small" onClick={() => deleteReview(review)} ><ClearIcon/></Button>
+                </h4>
               </div>
-            </h2>
+              <div className={styles.reviewButtons}>
+                <UpdateForm userReview={review} getReviews={getReviews}/>
+                <Button style={{minWidth: '10px'}} size="small" onClick={() => deleteReview(review)} ><ClearIcon/></Button>
+              </div>
+
             <section className={styles.reviewListTextField}>
               {review.textField}
             </section>

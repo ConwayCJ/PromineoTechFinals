@@ -11,14 +11,57 @@
   background-color: aliceblue;
   margin-bottom: 1em;
   padding: 10px;
-  display: flex;
-  flex-direction: column;
+  padding-top: 0px;
 }
 
 .reviewListTextField {
   margin-left: 1em;
+  font-size: inherit;
+}
+
+@media (min-width: 0px) {
+  .reviewTitle {
+    font-size: 14px;
+    overflow-wrap: break-word;
+    inline-size: 95%;
+  }
+}
+
+@media (min-width: 580px) {
+  .reviewTitle {
+    font-size: 16px
+    
+  }
+}
+
+@media (min-width: 1000px) {
+  .reviewTitle {
+    font-size: 18px;
+  }
+} 
+
+
+.reviewListUserReview {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: 80% 20%;
+  align-items: center;
 }
 
 .reviewTitle {
-  display: flex;
+  grid-column-start: 1;
+  justify-self: start;
+}   
+
+.reviewButtons {
+  justify-self: end;
+  grid-row-start: 1;
+  grid-column-start: 2;
 }
+
+.reviewListTextField {
+  grid-row-start: 2;
+}
+
+
+

@@ -37,6 +37,7 @@ export default function UserForm(props) {
       ...userInformation,
       avatar: e.target.value
     })
+    
   }
 
   function handleBadgeChange (e) {
@@ -76,8 +77,7 @@ export default function UserForm(props) {
           <Accordion>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon/>}
-              aria-controls="panel1-content"
-              id="panel1-header"
+
             >
               <Typography> Choose Avatar:</Typography>
             </AccordionSummary>

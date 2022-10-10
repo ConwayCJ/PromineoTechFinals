@@ -49,7 +49,7 @@ function UpdateForm({ userReview, getReviews }) {
 
   return (
     <>
-      <Button size='small' onClick={handleOpen}>
+      <Button style={{minWidth: '10px'}} size='small' onClick={handleOpen}>
         <EditIcon />
       </Button>
       <Modal

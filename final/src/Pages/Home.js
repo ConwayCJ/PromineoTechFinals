@@ -1,6 +1,6 @@
 import React from "react";
-import PortfolioHeader from "../components/PortfolioHeader";
-import PortfolioBody from "../components/PortfolioBody"
+import PortfolioHeader from '../components/PortfolioHeader'
+import PortfolioBody from '../components/PortfolioBody'
 
 function Home () {
 
@@ -9,11 +9,8 @@ function Home () {
     <>
       <PortfolioHeader/>
       <PortfolioBody/>
-      {/* Body/projects? */}
-      
     </>
   )
 }
-
 
 export default Home

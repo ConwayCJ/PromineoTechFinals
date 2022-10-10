@@ -1,14 +1,41 @@
 .selfPortrait {
   border-radius: 50%;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.334);
+  
 }
 
 .header {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content:space-evenly;
+  margin-top: 2em;
+  height: 200px;
 }
 
 .headerSection {
-  height: 250px;
-  width: 500px
+  width: 30%;
+
+}
+
+.header img {
+  height:inherit;
+  margin-right: 3em;
+}
+
+@media (min-width: 0px) {
+  .headerSection {
+    font-size: 12px
+  }
+}
+
+@media (min-width: 550px) {
+  .headerSection {
+    font-size: 14px
+  }
+}
+
+@media (min-width: 1200px) {
+  .headerSection {
+    font-size: 16px
+  }
 }

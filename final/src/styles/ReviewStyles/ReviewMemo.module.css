@@ -1,7 +1,24 @@
 .memo {
   text-align: center;
   margin-top: 2em;
-  font-size: larger;
   font-weight: 600;
   padding: 1em;
+}
+
+@media (min-width: 0px) {
+  .memo {
+    font-size: 14px
+  }
+}
+
+@media (min-width: 580px) {
+  .memo {
+    font-size: 16px
+  }
+}
+
+@media (min-width: 1000px) {
+  .memo {
+    font-size: 18px;
+  }
 }
